@@ -1,0 +1,325 @@
+/*index.html에 선언된 스타일시트*/
+@font-face {
+    font-family: 'SeoulHangangM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Pretendard", sans-serif;
+}
+
+/*!* 아래의 모든 코드는 영역::코드로 사용 *!*/
+/**::-webkit-scrollbar {*/
+/*    width: 3px;  !* 스크롤바의 너비 *!*/
+/*}*/
+
+/**::-webkit-scrollbar-thumb {*/
+/*    position: relative;*/
+/*    height: 30%; !* 스크롤바의 길이 *!*/
+/*    background-color: #FF553E; !* 스크롤바의 색상 *!*/
+/*}*/
+
+/**::-webkit-scrollbar-track {*/
+/*    background-color: rgba(0, 0, 0, 0);!*스크롤바 뒷 배경 색상*!*/
+/*}*/
+
+.wrap {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    /*border: solid 1px red;*/
+    width: 100%;
+    background: rgb(255, 255, 255, .85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /*Safari 전용 blur*/
+    z-index: 1;
+}
+nav {
+    /*border: solid 1px blue;*/
+    font-family: 'SeoulHangangM', sans-serif;
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+
+#nav_logo {
+    display: grid;
+    place-items: center;
+    float: left;
+    /*border: solid 1px green;*/
+    height: 60px;
+}
+
+
+#nav_menu {
+    display: inline-block;
+    list-style-type: none;
+    float: right;
+    line-height: 60px;
+}
+#nav_menu li {
+
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: center;
+}
+
+
+
+#nav_menu button {
+    font-size: 18px;
+    font-weight: 200;
+    position: relative; /* absolute 위치 설정을 위한 상대적 위치 설정 */
+    border: none;
+    background: none;
+}
+#nav_menu button:hover {
+    font-weight: 700;
+    color: #FF553E;
+}
+#nav_menu button:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px; /* border-bottom의 두께 */
+    background-color: #FF553E;
+    animation: slideIn 0.5s ease; /* slideIn 애니메이션을 0.5초 동안 적용 */
+}
+#nav_menu button:active {
+    opacity: .5;
+}
+
+
+
+/*본 콘텐츠 진입*/
+.main_img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*
+    background: linear-gradient(to right,
+            rgb(255, 255, 255, .9), rgb(255, 255, 255, .5)), url("../sources/test2.png");
+     */
+    background-image: url("../sources/test2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: .85;
+}
+
+.sec1_logo {
+    width: 100%;
+    /*border: solid 1px red;*/
+    display: inline-block;
+}
+.sec1_logo p {
+    text-align: center;
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 1.55rem;
+    font-weight: 200;
+    line-height: 1.25;
+
+    float: right;
+
+    /*border: solid 1px red;*/
+}
+.sec1_logo span {
+    font-weight: 800;
+    font-size: 2.42rem;
+}
+
+
+
+.sector1_contents {
+    position: sticky;
+    top: 0%;
+    width: 100%;
+    /*border: solid 1px red;*/
+    margin-top: 70rem;
+    /*
+    background: linear-gradient(to right,
+    rgb(255, 255, 255, 1) 60%, rgb(255, 255, 255, .8) 100%);
+    backdrop-filter: blur(5px);
+     */
+    background: white;
+    padding: 5rem 0;
+    z-index: -1;
+}
+.sector1 {
+    display: flex;
+    width: 90%;
+    /*border: solid 1px blue;*/
+    margin: 0 auto;
+}
+
+/*.sec1_logo_symbol {*/
+/*    !*border: solid 1px blue;*!*/
+/*    width: 200px;*/
+/*    margin-right: 2rem;*/
+/*}*/
+/*.sec1_logo_typo {*/
+/*    !*border: solid 1px blue;*!*/
+
+/*}*/
+/*.sec1_logo_typo p {*/
+/*    display: inline-block;*/
+/*    font-size: 25px;*/
+/*    font-weight: 200;*/
+/*    margin-top: 1rem;*/
+/*    line-height: 1.25;*/
+
+/*}*/
+/*.sec1_logo_typo span {*/
+/*    font-weight: 800;*/
+/*    font-size: 39px;*/
+/*}*/
+/*.sec1_mockup {*/
+/*    float: right;*/
+
+/*}*/
+
+
+/*SECTOR 2*/
+
+.sec2_bg {
+    /*border: solid 1px blue;*/
+    width: 100%;
+    height: 1000px;
+    /*background: white;*/
+    background: linear-gradient(to right,
+    rgb(255, 255, 255, 1) 30%, rgb(255, 255, 255, .7)100%), url("../sources/test3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sector2 {
+    /*border: solid 1px red;*/
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15rem;
+}
+.project_bg {
+    font-weight: 100;
+}
+.red {
+    font-weight: 500;
+    color: #FF553E;
+}
+.underline {
+    width: 100%;
+    margin-top: 15px;
+    border-bottom: solid .5px #FFAFAF;
+}
+
+
+.typewriter h1 {
+    display: inline-block;
+    opacity: 0;
+    font-size: 5em;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .025em solid #FF553E; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+}
+.typewriter p {
+    font-weight: 600;
+    color: #FF553E;
+
+}
+.subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.75rem;
+    word-break: keep-all;
+}
+.typewriter.active h1 {
+    opacity: 1;
+    animation:
+            typing 1.5s steps(14, end),
+            blink-caret 1.25s step-end infinite;
+}
+.typewriter.active p {
+    animation: proj_bg .75s ease 0s 1 normal none;
+}
+.typewriter.active .subtitle {
+    animation: subtitle_bg 2.5s ease 0s 1 normal none;
+}
+
+
+.source {
+    font-weight: 200;
+    font-size: 12px;
+    color: darkgray;
+}.sector2 img {
+    margin: 60px 0 0 150px;
+    height: 17vw;
+ }
+
+
+
+
+
+
+ .sec2_2_bg {
+     /*border: solid 1px red;*/
+     width: 100%;
+     height: 1000px;
+     background: white;
+ }
+.sector2_2 {
+    /*border: solid 1px red;*/
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30rem;
+}
+.typewriter2 h1 {
+    display: inline-block;
+
+    font-size: 5em;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .025em solid #FF553E; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+
+
+}
+.typewriter2 p {
+    font-weight: 600;
+    color: #FF553E;
+
+}
+
+.typewriter2.active h1 {
+    opacity: 1;
+    animation:
+            typing 1.5s steps(14, end),
+            blink-caret 1.25s step-end infinite;
+}
+.typewriter2.active p {
+    animation: proj_bg .75s ease 0s 1 normal none;
+}
+.typewriter2.active .subtitle {
+    animation: subtitle_bg 2s ease 0s 1 normal none;
+}

@@ -1,0 +1,143 @@
+@media only screen and (max-width: 600px) {
+    #nav_menu {
+        display: none;
+    }
+    .sec1_logo img {
+        display: none;
+    }
+    .sec1_logo {
+        display: block;
+        text-align: center;
+    }
+    .sec1_logo p {
+        text-align: center;
+        font-size: 3vw;
+        font-weight: 200;
+        line-height: 1.25;
+
+        float: right;
+
+        /*border: solid 1px red;*/
+    }
+    .sector2 img {
+        height: 35vw;
+    }
+.sec1_logo span {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-weight: 800;
+    font-size: 4.6vw;
+}
+    .typewriter h1 {
+        display: inline-block;
+        opacity: 0;
+        font-size: 6vw;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .025em solid #FF553E; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    }
+    .subtitle {
+        font-weight: 300;
+        font-size: 2.5vw;
+        line-height: 2.25vw;
+    }
+    .source {
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    #nav_menu button {
+        font-size: 14px;
+    }
+    .sec1_logo p {
+        text-align: center;
+        display: inline-block;
+        margin-top: 25px;
+        font-size: 1.9vw;
+        font-weight: 200;
+        line-height: 1.25;
+
+        float: right;
+
+        /*border: solid 1px red;*/
+    }
+.sec1_logo span {
+    font-weight: 800;
+    font-size: 3vw;
+}
+    .typewriter h1 {
+        display: inline-block;
+        opacity: 0;
+        font-size: 4vw;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .025em solid #FF553E; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    }
+    .subtitle {
+        font-weight: 300;
+        font-size: 1.75vw;
+        line-height: 2.25vw;
+    }
+    .sector2 img {
+        height: 35vw;
+    }
+}
+@media only screen and (min-width: 1200px) {
+
+}
+
+
+
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%; /* 100%의 너비로 변화 */
+    }
+}
+
+
+
+
+@keyframes proj_bg {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 70% }
+
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #FF553E; }
+}
+
+
+@keyframes subtitle_bg {
+    0% {
+        opacity: 0;
+        transform: translateY(250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
