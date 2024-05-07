@@ -1,4 +1,4 @@
-@media only screen and (max-width: 800px) {
+@media all and (max-width: 479px) {
     #nav_menu {
         display: none;
     }
