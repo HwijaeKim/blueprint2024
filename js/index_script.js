@@ -88,7 +88,7 @@ window.addEventListener('scroll', () => {
         header.classList.add('active');
     }
     else if (scrollTop < 1500) {
-        body_bg.style.cssText = 'background-image: url("../sources/test2.jpg"); filter: brightness(1); opacity: .5;'
+        body_bg.style.cssText = 'background-image: url("./sources/test2.jpg"); filter: brightness(1); opacity: .5;'
         sec1_logo.style.display = 'inline-block';
         sector1.style.background = 'white';
         header.classList.remove('active');
@@ -98,7 +98,7 @@ window.addEventListener('scroll', () => {
         // body_bg.style.backgroundImage = 'url("../sources/bg_2.jpg")';
         // body_bg.style.filter = 'brightness(1)';
         // body_bg.style.filter = 'brightness(0.5)';
-        body_bg.style.cssText = 'background-image: url("../sources/bg_2.jpg"); filter: brightness(.45); opacity: 1; backdrop-filter: blur(10px);'
+        body_bg.style.cssText = 'background-image: url("./sources/bg_2.jpg"); filter: brightness(.45); opacity: 1; backdrop-filter: blur(10px);'
     }
 
     if( scrollTop > 4000) {
