@@ -50,7 +50,7 @@ nav_btn.forEach((item) => {
             window.scrollTo({top: 1400, behavior: 'smooth'});
         }
         else if(event.target.classList.contains('foot')) {
-            window.scrollTo({top: 4400, behavior: 'smooth'});
+            window.scrollTo({top: 4600, behavior: 'smooth'});
         }
     })
 })
