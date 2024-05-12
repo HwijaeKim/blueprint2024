@@ -81,7 +81,7 @@ window.addEventListener('scroll', () => {
 
 
 
-    if(scrollTop > 1400) {
+    if(scrollTop > 1450) {
         // body_bg.style.backgroundImage = 'none';
         // sec1_logo.style.display = 'none';
         // sector1.style.background = 'none';
