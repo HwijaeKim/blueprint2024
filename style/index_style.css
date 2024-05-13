@@ -1,0 +1,597 @@
+/*index.html에 선언된 스타일시트*/
+@font-face {
+    font-family: 'SeoulHangangM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    color: #1f1f1f;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Pretendard", sans-serif;
+}
+
+/*!* 아래의 모든 코드는 영역::코드로 사용 *!*/
+/**::-webkit-scrollbar {*/
+/*    width: 3px;  !* 스크롤바의 너비 *!*/
+/*}*/
+
+/**::-webkit-scrollbar-thumb {*/
+/*    position: relative;*/
+/*    height: 30%; !* 스크롤바의 길이 *!*/
+/*    background-color: #FF553E; !* 스크롤바의 색상 *!*/
+/*}*/
+
+/**::-webkit-scrollbar-track {*/
+/*    background-color: rgba(0, 0, 0, 0);!*스크롤바 뒷 배경 색상*!*/
+/*}*/
+.clear {
+    clear: both;
+}
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    /*border: solid 1px red;*/
+    width: 100%;
+    color: #1f1f1f;
+    z-index: 1;
+
+    transition: ease .5s;
+}
+header.active {
+    background: rgb(255, 255, 255, .85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /*Safari 전용 blur*/
+}
+nav {
+    /*border: solid 1px blue;*/
+    font-family: 'Pretendard', sans-serif;
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+
+#nav_logo {
+    display: grid;
+    place-items: center;
+    float: left;
+    /*border: solid 1px green;*/
+    height: 60px;
+}
+
+
+.nav_menu {
+    display: inline-block;
+    list-style-type: none;
+    float: right;
+    line-height: 60px;
+}
+.nav_menu li {
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: center;
+}
+
+
+
+.nav_menu button {
+    font-size: 1em;
+    font-weight: 200;
+    position: relative; /* absolute 위치 설정을 위한 상대적 위치 설정 */
+    border: none;
+    background: none;
+}
+.nav_menu button:hover {
+    font-weight: 700;
+    color: #FF553E;
+}
+.nav_menu button:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px; /* border-bottom의 두께 */
+    background-color: #FF553E;
+    animation: slideIn 0.5s ease; /* slideIn 애니메이션을 0.5초 동안 적용 */
+}
+.nav_menu button:active {
+    opacity: .5;
+}
+
+
+/*본 콘텐츠 진입*/
+.main_img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*
+    background: linear-gradient(to right,
+            rgb(255, 255, 255, .9), rgb(255, 255, 255, .5)), url("../sources/test2.png");
+     */
+    background-image: url("../sources/test2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: .5;
+    /*backdrop-filter: blur(20px);*/
+    /*transition: ease .5s;*/
+}
+
+
+.sec1_logo {
+    width: 100%;
+    /*border: solid 1px red;*/
+}
+.sec1_logo img {
+    float: right;
+    width: 25em;
+    display: block;
+}
+.sec1_logo p {
+    margin-top: 2.25em;
+    display: block;
+    font-size: 1.55rem;
+    font-weight: 200;
+    line-height: 1.25;
+
+
+    /*border: solid 1px red;*/
+}
+.sec1_logo span {
+    font-weight: 800;
+    font-size: 2.42rem;
+}
+
+
+
+.sector1_contents {
+    display: inline-block;
+    position: sticky;
+    top: -5%;
+    width: 100%;
+    transition: top 0.3s ease; /* top 속성에 대한 변화를 0.3초 동안 부드럽게 처리 */
+
+    /*border: solid 1px red;*/
+    margin-top: 70rem;
+    /*
+    background: linear-gradient(to right,
+    rgb(255, 255, 255, 1) 60%, rgb(255, 255, 255, .8) 100%);
+    backdrop-filter: blur(5px);
+     */
+    background: white;
+    padding: 5rem 0;
+    z-index: -1;
+}
+.sector1 {
+    display: flex;
+    width: 90%;
+    /*border: solid 1px blue;*/
+    margin: 0 auto;
+}
+
+
+
+/*SECTOR 2*/
+.sec2_bg {
+    /*border: solid 1px blue;*/
+    width: 100%;
+    height: 1200px;
+    background: white;
+    background: linear-gradient(to right,
+    rgb(255, 255, 255, 1) 30%, rgb(255, 255, 255, .7)100%), url("../sources/test3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sector2 {
+    /*border: solid 1px red;*/
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15rem;
+}
+.red {
+    font-weight: 500;
+    color: #FF553E;
+}
+.underline {
+    width: 100%;
+    margin-top: 15px;
+    border-bottom: solid .5px #FFAFAF;
+}
+
+
+.typewriter h1 {
+    display: inline-block;
+    opacity: 0;
+    font-size: 5em;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .025em solid #FF553E; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+}
+.typewriter p {
+    font-weight: 600;
+    color: #FF553E;
+
+}
+.subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.75rem;
+    word-break: keep-all;
+}
+.typewriter.active h1 {
+    opacity: 1;
+    animation:
+            typing 1.5s steps(14, end),
+            blink-caret 1.25s step-end infinite;
+}
+.typewriter.active p {
+    animation: proj_bg .75s ease 0s 1 normal none;
+}
+.typewriter.active .subtitle {
+    animation: subtitle_bg 2.5s ease 0s 1 normal none;
+}
+
+.source {
+    font-weight: 200;
+    font-size: 12px;
+    color: darkgray;
+}.sector2 img {
+    margin: 60px 0 0 150px;
+    height: 17vw;
+ }
+
+
+
+/*SECTOR3*/
+.sec3_bg {
+    display: block;
+    width: 100%;
+    height: 180vh;
+    background: rgba(255, 255, 255, 1);
+    /*background: linear-gradient(0deg,*/
+    /*            rgba(31,31,31,1) 70%,*/
+    /*            rgba(255,255,255,1) 100%);*/
+    background: linear-gradient(0deg,
+                rgba(255,241,241,1) 0%,
+                rgba(255,255,255,1) 55%);
+}
+.sector3 {
+    /*border: solid 1px red;*/
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10em;
+
+}
+/*.sector3 p {*/
+/*    font-weight: 600;*/
+/*    color: #FF553E;*/
+/*}*/
+/*.sector3.active p {*/
+/*    animation: proj_bg .75s ease 0s 1 normal none;*/
+/*}*/
+
+.bubble_container {
+    /*border: solid 1px red;*/
+    margin-top: 5em;
+    width: 100%;
+}
+.speech-bubbleL {
+    position:relative;
+    /*border: solid .5px gray;*/
+    width:40em;
+    padding: 2em 0;
+    background: rgb(255, 255, 255, .9);
+    border-radius:1.5rem;
+    color:#1f1f1f;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin: 2em 0;
+
+    box-shadow:
+            1.5px 1.1px 5.3px rgba(0, 0, 0, 0.024),
+            3.2px 2.3px 14.9px rgba(0, 0, 0, 0.034),
+            5.9px 4.2px 30.9px rgba(0, 0, 0, 0.045),
+            14px 10px 57px rgba(0, 0, 0, 0.07);
+}
+.speech-bubbleL.active {
+    animation: bubbleAniL 1s ease 0s 1 normal forwards;
+}
+.speech-bubbleR {
+    position:relative;
+    /*border: solid .5px gray;*/
+    width:40em;
+    padding: 2em 0;
+    background: rgb(255, 255, 255, .9);
+    border-radius:1.5rem;
+    color:#1f1f1f;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin: 2em 0;
+    float: right;
+
+    box-shadow:
+            1.5px 1.1px 5.3px rgba(0, 0, 0, 0.024),
+            3.2px 2.3px 14.9px rgba(0, 0, 0, 0.034),
+            5.9px 4.2px 30.9px rgba(0, 0, 0, 0.045),
+            14px 10px 57px rgba(0, 0, 0, 0.07);
+}
+.speech-bubbleR.active {
+    animation: bubbleAniR 1s ease 0s 1 normal forwards;
+}
+.speech-bubbleL.bottom-left:after {
+    content:'';
+    position:absolute;
+    left:35px;
+    bottom:-15px;
+    /*border-left:1px solid transparent;*/
+    border-right:25px solid transparent;
+    border-top:15px solid white;
+
+
+
+}
+.speech-bubbleR.bottom-right:after {
+    content:'';
+    position:absolute;
+    right:35px;
+    bottom:-15px;
+    border-left:25px solid transparent;
+    /*border-right:25px solid transparent;*/
+    border-top:15px solid white;
+
+}
+.small {
+    font-size: .6em;
+    font-weight: 300;
+    color: gray;
+}
+
+
+/*SECTOR4*/
+.sec4_bg {
+    /*border: solid 1px blue;*/
+    width: 100%;
+    height: 100vh;
+    margin-top: 15em;
+    /*background: white;*/
+}
+.sector4 {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10em;
+}
+.sector4 p {
+    font-weight: 600;
+    color: #FF553E;
+}
+.naming {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: ease 2s;
+    transition-delay: .25s;
+}
+.naming.active {
+    opacity: 1;
+}
+.main {
+    color: rgba(255, 255, 255, .95);
+    font-family: 'SUIT', sans-serif;
+    font-size: 10em;
+    font-weight: 900;
+    line-height: .7em;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .3);
+}
+.naming_small {
+    color: rgba(255, 255, 255, .95);
+    font-size: 20px;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+.naming_sub {
+    display: block;
+    /*border: solid 1px red;*/
+    color: rgba(255, 255, 255, .95);
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
+    font-size: 1.5em;
+    font-weight: 200;
+    word-break: keep-all;
+    opacity: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    transition: ease 2s;
+    transition-delay: .25s;
+}
+.naming_sub.active {
+    opacity: 1;
+}
+
+
+
+/*SECTOR5*/
+.sec5_bg {
+    width: 100%;
+    height: 210vh;
+    background: linear-gradient(0deg,
+                rgba(255,255,255,1) 50%,
+                rgba(255,255,255,0) 100%);
+
+}
+.sector5 {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 71em;
+}
+.bi_ani video {
+    width: 100%;
+    margin-top: 4em;
+    object-fit: cover;
+}
+
+
+
+/*SECTOR6*/
+.sec6_bg {
+    width: 100%;
+    height: 150vh;
+    background: white;
+}
+.sector6 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.color_container {
+    margin-top: 5em;
+    width: 100%;
+    height: 10em;
+    display: flex;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*justify-content: space-between;*/
+}
+.color1 {
+
+    width: 25%;
+    background: #FF553E;
+    padding: 1em 2em;
+    color: white;
+    font-weight: 300;
+}
+.color2 {
+    width: 25%;
+    background: #FFAFAF;
+    padding: 1em 2em;
+    font-weight: 300;
+}
+.color3 {
+    width: 25%;
+    background: #F8EC23;
+    padding: 1em 2em;
+    font-weight: 300;
+}
+.color4 {
+    width: 25%;
+    background: #1f1f1f;
+    padding: 1em 2em;
+    color: white;
+    font-weight: 300;
+}
+.fontcolor {
+    /*border: solid 1px red;*/
+
+    margin-top: 5em;
+}
+.fontcolor img {
+    width: 100%;
+    object-fit: cover;
+}
+.fontcolor.active {
+    animation: fontcolorAni 1s ease 0.5s 1 normal forwards;
+}
+
+
+
+/*SECTOR7*/
+.sec7_bg {
+    width: 100%;
+    height: 200vh;
+    background: white;
+}
+.sector7 {
+    width: 90%;
+    margin: 0 auto;
+    /*border: solid 1px red;*/
+}
+
+.symbol_container {
+    /*border: solid 1px red;*/
+    width: 100%;
+    position: relative;
+}
+.left_sub {
+    position: absolute;
+    width: 33%;
+    top: 50%;
+    z-index: 1;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #FF553E;
+    font-weight: 600;
+}
+.right_sub {
+    position: absolute;
+    width: 30%;
+    top: 25%;
+    right: 3%;
+    z-index: 1;
+    text-align: right;
+    font-weight: 600;
+    border-top: solid 1px #F8EC23;
+    padding-top: 10px;
+}
+.symbol {
+    position: relative;
+    /*border: solid 1px red;*/
+    width: 25%;
+    margin: 0 auto;
+    padding-top: 5em;
+}
+.symbol img {
+
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, .05));
+}
+.symbol_sub {
+    display: block;
+    margin-top: 5em;
+    /*border: solid 1px red;*/
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.bold {
+    font-weight: 600;
+}
+
+.typo {
+    /*border: solid 1px red;*/
+    margin-top: 15em;
+    width: 30%;
+    float: right;
+}
+.typo img {
+    width: 100%;
+    object-fit: cover;
+}
+.typo_sub {
+    display: block;
+    margin-top: 25em;
+    /*border: solid 1px red;*/
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
