@@ -130,7 +130,7 @@ section#intro {
     z-index: -9;
     opacity: 1;
 
-    background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 60%);
+    background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
 
     /*background-image: url("../sources/intro_bg.png");*/
     /*background-repeat: no-repeat;*/
